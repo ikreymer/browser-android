@@ -17,10 +17,10 @@ PID=$!
 
 sleep 10
 
-#if [[ -n "$PROXY_GET_CA" ]]; then
-#    curl -x "$PROXY_HOST:$PROXY_PORT"  "$PROXY_GET_CA" > /tmp/proxy-ca.pem
-#    bash /app/addcert.sh /tmp/proxy-ca.pem
-#fi
+if [[ -n "$PROXY_GET_CA" ]]; then
+    curl -x "$PROXY_HOST:$PROXY_PORT"  "$PROXY_GET_CA" > /tmp/proxy-ca.pem
+    bash /app/addcert.sh /tmp/proxy-ca.pem
+fi
 
 wait $PID
 
