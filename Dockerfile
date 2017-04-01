@@ -1,4 +1,7 @@
-FROM webrecorder/base-browser
+#adapted from
+#https://github.com/softsam/docker-android-emulator
+
+FROM oldwebtoday/base-browser
 
 # Install all dependencies
 RUN apt-get update && \
