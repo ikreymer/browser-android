@@ -49,10 +49,9 @@ RUN chmod +x /app/run.sh
 CMD /app/entry_point.sh /app/run.sh
 
 
-LABEL wr.name="Android Test" \
+LABEL wr.name="Android" \
       wr.version="API $SDK_VERS" \
       wr.os="android" \
-      wr.hidden="1" \
       wr.release="2016-09-14" \
       wr.icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCUlEQVR4nMWQoU4DYRCEvznopSAQRdQhEGgUFs5cQlA8AQLZUMUb1CEpFslTHJCrgIcgkJCQlCAIqg0Q7gYDSa/8F+o6cnZ2dmdg3lDdoD9INzAPYEVivbOd3YV0UXA5T1uCHjACjUt00s/T9swG4PPSXgUbaFC6Ab74N8JZnrbBhdExsFSxhBKpt+Ci2dm5HP7yi1WR+4axYB9Y+XPJ5XKB1oDdoAEoFnyFY4FRDMSTXE0Hs6PygfDA6B3YC4mFb4zuq1wAp3n6KmhNcoYCu9lNskrEqQ5+XO1NpCvsa+AN6RB7a3oZajo4SrInzAj0AgxtPrpJ9hjSBj8AUOQDm2fEJyW3dbr54xuZP12+ugYsYQAAAABJRU5ErkJggg=="
 

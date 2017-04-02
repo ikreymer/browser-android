@@ -15,12 +15,19 @@ run_browser emulator64-${android_arch} -avd ${android_arch} -noaudio -gpu off -v
 
 PID=$!
 
-sleep 10
+sleep 20
 
 if [[ -n "$PROXY_GET_CA" ]]; then
     curl -x "$PROXY_HOST:$PROXY_PORT"  "$PROXY_GET_CA" > /tmp/proxy-ca.pem
-    bash /app/addcert.sh /tmp/proxy-ca.pem
+
+    /app/addcert.sh /tmp/proxy-ca.pem
 fi
+
+# Wait until boot is done
+while [ "`adb shell getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done
+
+# Launch browser!
+adb shell am start -a android.intent.action.VIEW -d "$URL"
 
 wait $PID
 
