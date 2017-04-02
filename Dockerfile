@@ -50,7 +50,7 @@ CMD /app/entry_point.sh /app/run.sh
 
 
 LABEL wr.name="Android Test" \
-      wr.version="4.4.2" \
+      wr.version="API $SDK_VERS" \
       wr.os="android" \
       wr.hidden="1" \
       wr.release="2016-09-14" \
